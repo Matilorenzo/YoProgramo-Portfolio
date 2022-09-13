@@ -1,0 +1,74 @@
+/*le doy margen a la fila*/
+.row{
+    padding: 20px;
+}
+
+/*le doy estilo al contenedor*/
+div{
+background-color: #090a0a;
+text-align: center;
+color: rgb(241, 162, 59);
+}
+
+/*estilo de la foto de perfil*/
+
+@media (min-width: 1114px){
+    #mifoto{
+        height: auto;
+        margin-top: auto;
+        border-radius: 5%;
+        box-shadow: 2px 2px 2px rgb(241, 162, 59);
+    }
+}
+
+@media (max-width: 1113px){
+    #mifoto{
+        height: 80%;
+        margin-top: auto;
+        border-radius: 5%;
+        box-shadow: 2px 2px 2px rgb(241, 162, 59);
+    }
+}
+
+@media (max-width: 775px){
+    #mifoto{
+        height: 70%;
+        margin-top: auto;
+        border-radius: 5%;
+        box-shadow: 2px 2px 2px rgb(241, 162, 59);
+        }
+    }
+
+    @media (max-width: 681px){
+        #mifoto{
+            height: 60%;
+            margin-top: 15%;
+            border-radius: 5%;
+            box-shadow: 2px 2px 2px rgb(241, 162, 59);
+        }
+}
+
+@media (max-width: 639px){
+    #mifoto{
+        height: 55%;
+        margin-top: 17%;
+        border-radius: 5%;
+        box-shadow: 2px 2px 2px rgb(241, 162, 59);
+    }
+}
+
+@media (max-width: 575px){
+    #mifoto{
+        height: auto;
+        width: auto;
+        border-radius: 5%;
+        box-shadow: 2px 2px 2px rgb(241, 162, 59);
+    }
+}
+    
+
+/*etiqueta nombre*/
+#nombre{
+    font-weight: bold;
+    margin-top: 15%;
+}
