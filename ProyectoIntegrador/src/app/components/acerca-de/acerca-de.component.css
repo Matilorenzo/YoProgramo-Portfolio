@@ -3,12 +3,24 @@
     padding: 20px;
 }
 
+
+/*cambio las font*/
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+}
+
+
 /*le doy estilo al contenedor*/
 div{
 background-color: #090a0a;
 text-align: center;
 color: rgb(241, 162, 59);
 }
+
 
 /*estilo de la foto de perfil*/
 
@@ -71,4 +83,5 @@ color: rgb(241, 162, 59);
 #nombre{
     font-weight: bold;
     margin-top: 15%;
+    font-family: 'Playfair Display', serif;
 }
