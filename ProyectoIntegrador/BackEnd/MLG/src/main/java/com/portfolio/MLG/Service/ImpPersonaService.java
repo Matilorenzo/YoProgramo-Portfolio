@@ -1,0 +1,37 @@
+
+package com.portfolio.MLG.Service;
+
+import com.portfolio.MLG.Entity.Persona;
+import com.portfolio.MLG.Interface.IPersonaService;
+import com.portfolio.MLG.Repository.InterfacePersonaRepository;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ImpPersonaService implements IPersonaService{
+    @Autowired InterfacePersonaRepository ipersonaRepository;
+
+    @Override
+    public List<Persona> getPersona() {
+       List<Persona> persona = ipersonaRepository.findAll();
+               return persona;
+    }
+
+    @Override
+    public void savePersona(Persona persona) {
+        ipersonaRepository.save(persona);
+    }
+
+    @Override
+    public void deletePersona(Long id) {
+        ipersonaRepository.deleteById(id);
+    }
+
+    @Override
+    public Persona findPersona(Long id) {
+        Persona persona = ipersonaRepository.findById(id).orElse(null);
+        return persona;
+    }
+    
+}
