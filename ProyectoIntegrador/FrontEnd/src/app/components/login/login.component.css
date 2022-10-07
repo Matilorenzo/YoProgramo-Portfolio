@@ -1,20 +1,10 @@
-div{
-    background-color: black;
-}
-
-section{
-    background-color: black;
-}
-
-h2, label{
-    color: rgb(241, 162, 59);
-}
-
-button{
-    background-color: rgb(241, 162, 59);
-    color: black;
-}
-
-p{
-    color: antiquewhite;
-}
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
