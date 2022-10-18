@@ -9,7 +9,8 @@
             <a href=""> <i class="fa-brands fa-square-instagram"></i> </a>
             <a href=""> <i class="fa-brands fa-square-twitter"></i> </a>
             <a href=""> <i class="fa-brands fa-square-facebook"></i> </a>
-            <button type="button" class="btn btn-outline-light" (click)="login()">Ingreso</button>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesion</button>
         </div>
     </div>
 </div>
