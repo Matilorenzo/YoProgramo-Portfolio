@@ -11,7 +11,7 @@
 <div class="row">
     <h1> Educación </h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-warning" routerLink="/nuevaexp" *ngIf="isLogged">
+        <button type="button" class="btn btn-warning" routerLink="/nuevaedu" *ngIf="isLogged">
             Agregar Educacion
         </button>
 
@@ -26,7 +26,7 @@
                         <h3>{{Educacion.nombreE}}</h3>
                     </td>
                     <td>{{Educacion.descripcionE}}</td>
-                    <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editexp/{{Educacion.id}}">
+                    <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}">
                             Editar </button></td>
                     <td *ngIf="isLogged"><button class="btn btn-warning" (click)="delete(Educacion.id)"> Borrar
                         </button></td>
