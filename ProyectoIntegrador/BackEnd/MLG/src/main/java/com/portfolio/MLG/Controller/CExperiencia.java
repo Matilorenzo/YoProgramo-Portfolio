@@ -38,7 +38,7 @@ public class CExperiencia {
     
     @GetMapping("/detail/{id}")
     public ResponseEntity<Experiencia> getById(@PathVariable("id") int id){
-        if(!sExperiencia.existById(id))
+        if(!sExperiencia.existsById(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         Experiencia experiencia = sExperiencia.getOne(id).get();
         return new ResponseEntity(experiencia, HttpStatus.OK);
@@ -60,7 +60,7 @@ public class CExperiencia {
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexp){
         //Validamos si existe el ID
-        if(!sExperiencia.existById(id))
+        if(!sExperiencia.existsById(id))
             return new ResponseEntity(new Mensaje("Ese ID no existe"), HttpStatus.BAD_REQUEST);
         
         if(sExperiencia.existsByNombreE(dtoexp.getNombreE()) && sExperiencia.getByNombreE(dtoexp.getNombreE()).get().getId() != id)
@@ -80,7 +80,7 @@ public class CExperiencia {
     
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
-      if(!sExperiencia.existById(id)) {
+      if(!sExperiencia.existsById(id)) {
             return new ResponseEntity(new Mensaje("Ese ID no existe"), HttpStatus.BAD_REQUEST);
       }
       sExperiencia.delete(id);

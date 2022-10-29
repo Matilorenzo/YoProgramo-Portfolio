@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface InterfacePersonaRepository extends JpaRepository<Persona,Integer>{
-      public Optional<Persona> findByNombreE(String nombre);
+      public Optional<Persona> findByNombre(String nombre);
     public boolean existsByNombre(String nombre);
 }
