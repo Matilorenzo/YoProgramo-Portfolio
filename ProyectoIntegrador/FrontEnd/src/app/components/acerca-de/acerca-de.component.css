@@ -13,6 +13,11 @@ p {
     font-family: 'Inter', sans-serif;
 }
 
+.descripcion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*le doy estilo al contenedor*/
 div{
