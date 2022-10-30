@@ -1,37 +1,29 @@
-<link rel="stylesheet" href="educacion.component.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
-
-
-<!--creo listas no ordenadas-->
 <div class="row">
-    <h1> Educación </h1>
+    <h1>Educacion</h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-warning" routerLink="/nuevaedu" *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
             Agregar Educacion
         </button>
-
     </div>
 
-    <div class="col-lg-1"></div>
+    <div class="col lg 1"></div>
     <div class="col-lg-11">
         <table class="table">
             <tbody>
                 <tr *ngFor="let Educacion of educacion">
                     <td>
-                        <h3>{{Educacion.nombreE}}</h3>
+                        <h2>{{Educacion.nombreE}}</h2>
                     </td>
                     <td>{{Educacion.descripcionE}}</td>
-                    <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}">
-                            Editar </button></td>
-                    <td *ngIf="isLogged"><button class="btn btn-warning" (click)="delete(Educacion.id)"> Borrar
-                        </button></td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-fill"></i> Editar</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash-fill"></i> Borrar</button>
+                    </td>
                 </tr>
-
             </tbody>
         </table>
     </div>

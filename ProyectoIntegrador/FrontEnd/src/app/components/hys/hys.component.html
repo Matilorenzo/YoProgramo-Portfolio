@@ -2,7 +2,7 @@
 
     <h1>Hard and Soft Skills</h1>
     <div class="col-lg-2">
-        <button type="button" routerLink="/newskill" class="btn btn-warning" *ngIf="isLogged">
+        <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">
             Nueva Skill
          </button>
     </div>
@@ -36,7 +36,7 @@
                 Editar </button>
             </td>
         <td *ngIf="isLogged">
-            <button class="btn btn-warning" (click)="delete(skill.id)"> Borrar
+            <button class="btn btn-danger" (click)="delete(skill.id)"> Borrar
               </button>
             </td>
         </div>

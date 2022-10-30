@@ -1,7 +1,7 @@
 .row {
     padding: 15px;
     background-color: black;
-    color: rgb(151, 130, 92);
+    color: rgb(172, 137, 73);
 }
 
 ul {
@@ -15,4 +15,9 @@ h1, h2, h3 {
 
 p {
     font-family: 'Inter', sans-serif;
+}
+
+h3, td{
+    color: rgb(172, 137, 73);
+    font-family: 'Playfair Display', serif;
 }
